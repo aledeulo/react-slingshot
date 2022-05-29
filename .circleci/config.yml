@@ -2,7 +2,7 @@ version: 2.1
 
 default_docker_node: &default_docker_node
   docker:
-    - image: circleci/node:latest
+    - image: circleci/node:13.8.0
 
 
 jobs:
@@ -50,5 +50,4 @@ workflows:
             - build
       - audit:
           requires:
-            - build
             - test
