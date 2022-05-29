@@ -34,11 +34,8 @@ jobs:
     <<: *default_docker_node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - "npm-packages-cached_${CIRCLE_WORKFLOW_ID}"
       - run: |
-          npm audit fix && npm audit
+          npm audit
 
 
 workflows:
